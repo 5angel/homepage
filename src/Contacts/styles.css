@@ -11,24 +11,14 @@
   background-image: url('./vapor-bg.png');
   background-position: bottom;
   background-repeat: no-repeat;
-}
-
-.vapor > .container:before {
-  content: '';
-  position: absolute;
-  bottom: 40px;
-  left: 80px;
-  width: 190px;
-  height: 372px;
-  background-image: url('./vapor-statue.png');
+  text-align: center;
 }
 
 .contacts {
-  position: absolute;
-  z-index: 1;
-  top: 40px;
-  right: 0;
-  margin-right: 20px;
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  text-align: left;
 }
 
 .contacts__heading {
@@ -62,4 +52,19 @@
 .contacts__link:hover,
 .contacts__link:active {
   color: white;
+}
+
+@media (min-width: 940px) {
+  .contacts {
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    right: 0;
+  }
+
+  .vapor__statue {
+    position: absolute;
+    bottom: 40px;
+    left: 80px;
+  }
 }

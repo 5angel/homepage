@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Header from './Header/Header';
 import Welcome from './Welcome/Welcome';
 import Telegram from './Telegram/Telegram';
 import Contacts from './Contacts/Contacts';
@@ -8,15 +9,11 @@ class App extends Component {
   render() {
     return (
       <div className="wrap">
-        <header className="wrap__header">
-          <div className="container">
-            Здесь должна быть шапка с модной навигацией
-          </div>
-        </header>
+        <Header />
         <Welcome />
         <Telegram />
         <Contacts />
-	  </div>
+	    </div>
     );
   }
 }

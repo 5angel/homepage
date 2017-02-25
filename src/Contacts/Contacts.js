@@ -2,6 +2,8 @@ import React from 'react';
 
 import './styles.css';
 
+import statue from './vapor-statue.png';
+
 const PHONE = '+7 (964) 632-63-34';
 
 const LINKS = [
@@ -35,6 +37,11 @@ const Contacts = () => (
           }
         </ul>
       </div>
+      <img
+        className="vapor__statue"
+        src={statue}
+        alt="A E S T H E T I C"
+      />
     </div>
   </div>
 );
