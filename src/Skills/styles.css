@@ -1,0 +1,12 @@
+.neon {
+  background-color: #9900ff;
+  background-image: url('./neon-line.png');
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+
+.neon > .container {
+  background-image: url('./neon-bg.jpg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+}

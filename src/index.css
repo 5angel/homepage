@@ -1,0 +1,61 @@
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap__header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #323330;
+}
+
+.wrap__header > .container {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 20px;
+  color: gray;
+}
+
+.container {
+  position: relative;
+  width: 800px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.part {
+  position: relative;
+  height: 500px;
+}
+
+.part:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  box-shadow: inset 0 4px 8px rgba(0,0,0,.1);
+  pointer-events: none;
+}

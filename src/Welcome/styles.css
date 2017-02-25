@@ -1,0 +1,70 @@
+.javascript {
+  background-color: #f0da50;
+  color: #323330;
+}
+
+.welcome__header {
+  position: absolute;
+  z-index: 1;
+  top: 200px;
+  right: 0;
+  margin-right: 20px;
+}
+
+.welcome__intro {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  margin: 0 -40px;
+  margin-bottom: 40px;
+  padding: 8px 40px;
+  background-color: white;
+  font-size: 20px;
+  color: gray;
+  cursor: pointer;
+  user-select: none;
+}
+
+.welcome__intro:before {
+  content: '—';
+  position: absolute;
+  top: 0;
+  right: 100%;
+  margin-top: 8px;
+  margin-right: -40px;
+  padding-right: 4px;
+}
+
+.welcome__title ,
+.welcome__subtitle {
+  margin: 0;
+  font-weight: 500;
+}
+
+.welcome__title {
+  font-size: 50px;
+}
+
+.welcome__subtitle {
+  font-size: 30px;
+}
+
+.welcome__photo,
+.welcome__hint {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.welcome__photo {
+  margin-left: -60px;
+}
+
+.welcome__hint {
+  z-index: 1;
+  line-height: 24px;
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
