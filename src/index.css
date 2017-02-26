@@ -11,13 +11,25 @@ ul {
   padding: 0;
 }
 
+svg {
+  fill: currentColor;
+}
+
 .container {
   position: relative;
   min-height: 500px;
   margin: 0 auto;
   padding: 0 20px;
-  padding-top: 40px;
+  padding-top: 50px;
   box-sizing: border-box;
+  text-align: center;
+}
+
+.heading {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .part {

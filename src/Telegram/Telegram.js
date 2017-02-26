@@ -18,7 +18,7 @@ const ITEMS = [{
 const Telegram = () => (
   <div className="telegram part">
     <div className="container">
-      <h2 className="telegram__heading">Телеграм</h2>
+      <h2 className="heading">В «Телеграме»</h2>
       {
         ITEMS.map(({
           href,

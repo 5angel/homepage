@@ -8,7 +8,6 @@ const PHONE = '+7 (964) 632-63-34';
 
 const LINKS = [
   'mailto:vladsenator@gmail.com',
-  'https://linkedin.com/in/govnokoder',
   'https://twitter.com/vkozulya',
   'https://t.me/vkozulya',
 ];

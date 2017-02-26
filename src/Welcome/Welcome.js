@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './styles.css';
 
 import photo from './photo.jpg';
+import linkedin from './linkedin.svg';
 
 import { intros } from './intros.json';
 
@@ -39,16 +40,23 @@ class Welcome extends Component {
               Владислав Козуля
             </h1>
             <h2 className="welcome__subtitle">
-              Lead JavaScript Developer
+              Lead JavaScript Developer,
               <br />
-              UI/UX Designer
-              <br />
-              PM
-              <br />
-              *
+              UI/UX Designer & PM*
             </h2>
+            <a
+              className="cv-link"
+              href="https://linkedin.com/in/govnokoder"
+            >
+              <img
+                className="cv-link__icon"
+                src={linkedin}
+                alt="LinkedIn"
+              />
+              govnokoder
+            </a>
           </header>
-          <span className="welcome__hint">*автор большого числа несмешных мемов</span>
+          <span className="welcome__hint">*а также автор большого числа несмешных мемов</span>
           <img
             className="welcome__photo"
             src={photo}

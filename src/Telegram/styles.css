@@ -1,12 +1,8 @@
 .telegram {
   background-color: #dfe4e8;
-  text-align: center;
 }
 
-.telegram__heading {
-  margin: 20px 0;
-  font-weight: 500;
-  text-align: center;
+.telegram .heading {
   color: gray;
 }
 

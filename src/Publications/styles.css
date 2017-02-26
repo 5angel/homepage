@@ -1,0 +1,32 @@
+.vintage {
+  background-color: #f7dead;
+  background-image: url('./vintage-bg.png');
+  background-position: center;
+  color: #5c554b;
+}
+
+.vintage .container {
+  background-color: #f7dead;
+}
+
+.blog-link {
+  display: inline-block;
+  width: 200px;
+  margin: 20px;
+  padding: 14px 20px;
+  border: 4px solid #f19171;
+  box-sizing: border-box;
+  text-align: center;
+  color: #5c554b;
+}
+
+.blog-link:hover,
+.blog-link:active {
+  background-color: #f19171;
+}
+
+.blog-link__icon {
+  vertical-align: top;
+  width: 84px;
+  height: 84px;
+}
