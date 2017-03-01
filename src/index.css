@@ -1,7 +1,10 @@
+html {
+  font-size: 12px;
+}
+
 body {
   position: relative;
   margin: 0;
-  font-size: 30px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -11,45 +14,104 @@ ul {
   padding: 0;
 }
 
-svg {
-  fill: currentColor;
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 3.125rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+p {
+  margin: .625rem 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a:link,
+a:visited {
+  font-weight: 500;
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
 }
 
 .container {
   position: relative;
-  min-height: 500px;
   margin: 0 auto;
-  padding: 0 20px;
-  padding-top: 50px;
+  padding: 0 10px;
   box-sizing: border-box;
+}
+
+
+.row {
+  margin: 0 -10px;
+  padding: 10px 0;
   text-align: center;
 }
 
-.heading {
-  margin: 0;
-  margin-bottom: 20px;
-  font-weight: 500;
-  text-align: center;
+.column {
+  display: inline-block;
+  vertical-align: top;
+  width: 280px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: left;
 }
 
-.part {
-  position: relative;
+.column.-span_1,
+.column.-span_2 {
+  width: 560px;
+  max-width: 100%;
 }
 
-.part:before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  box-shadow: inset 0 4px 8px rgba(0,0,0,.1);
-  pointer-events: none;
+.main h3 {
+  margin-bottom: .625rem;
+  font-weight: 500
 }
 
-@media (min-width: 940px) {
+@media (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
   .container {
-    width: 800px;
+    width: 688px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 912px;
+  }
+
+  .column.-span_1 {
+    width: 280px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+
+  .container {
+    width: 1120px;
   }
 }

@@ -1,4 +1,4 @@
-.javascript {
+.welcome {
   background-color: #f0da50;
   color: #323330;
 }
@@ -6,44 +6,31 @@
 .welcome__header {
   position: relative;
   z-index: 1;
-  margin: 0 20px;
+  padding: 1.25rem 0;
+  text-align: center;
 }
 
-.welcome__intro {
+.intro {
   display: inline-block;
   position: relative;
-  margin: 40px 0;
-  padding: 8px 40px;
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+  padding: 1rem 2.5rem;
   background-color: white;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: gray;
   cursor: pointer;
   user-select: none;
   text-align: left;
 }
 
-.welcome__intro:before {
+.intro:before {
   content: '—';
   position: absolute;
   top: 0;
   right: 100%;
-  margin-top: 8px;
-  margin-right: -40px;
-  padding-right: 4px;
-}
-
-.welcome__title ,
-.welcome__subtitle {
-  margin: 0;
-  font-weight: 500;
-}
-
-.welcome__title {
-  font-size: 50px;
-}
-
-.welcome__subtitle {
-  font-size: 30px;
+  margin-top: 1rem;
+  margin-right: -2.5rem;
 }
 
 .welcome__photo {
@@ -54,32 +41,20 @@
 }
 
 .welcome__hint {
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: 50;
-  transform: translateX(-50%);
   line-height: 21px;
-  padding: 0 8px;
   background-color: #1a1a1a;
-  white-space: nowrap;
+  margin: 0 -10px;
+  padding: 0 2.5rem;
   font-size: 14px;
   text-align: center;
   color: white;
 }
 
 .cv-link {
+  display: inline-block;
   line-height: 24px;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   font-size: 16px;
-  font-weight: 500;
-  text-decoration: none;
-  color: blue;
-}
-
-.cv-link:hover,
-.cv-link:active {
-  text-decoration: underline;
 }
 
 .cv-link__icon {
@@ -87,39 +62,48 @@
   margin-right: 8px;
 }
 
-@media (min-width: 940px) {
-  .welcome__header {
+@media (min-width: 768px) {
+  .welcome__hint {
     position: absolute;
     z-index: 1;
-    top: 200px;
-    right: 0;
-    text-align: left;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 992px) {
+  .welcome > .container {
+    height: 420px
   }
 
-  .welcome__intro {
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    margin: 20px -40px;
-  }
-
-  .welcome__photo,
-  .welcome__hint {
+  .welcome__header,
+  .welcome__photo {
     position: absolute;
     bottom: 0;
     left: 0;
   }
 
-  .welcome__photo {
-    margin-top: 0;
-    margin-left: -80px;
+  .welcome__header {
+    left: 50%;
+    width: 50%;
+    margin-left: -5%;
+    padding-bottom: 5rem;
+    text-align: left;
+  }
+
+  .intro {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    margin: 0 -2.5rem;
   }
 
   .welcome__hint {
+    left: 70px;
     transform: none;
-  }
-
-  .cv-link {
-    float: right;
   }
 }
