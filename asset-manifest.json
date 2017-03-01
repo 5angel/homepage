@@ -1,12 +1,10 @@
 {
-  "main.css": "static/css/main.eedd4fce.css",
-  "main.css.map": "static/css/main.eedd4fce.css.map",
-  "main.js": "static/js/main.d4143720.js",
-  "main.js.map": "static/js/main.d4143720.js.map",
-  "static\\media\\figure-fortran.png": "static/media/figure-fortran.913e7bf5.png",
-  "static\\media\\figure-kozulya.png": "static/media/figure-kozulya.946189d1.png",
+  "main.css": "static/css/main.4184c5a9.css",
+  "main.css.map": "static/css/main.4184c5a9.css.map",
+  "main.js": "static/js/main.afda29af.js",
+  "main.js.map": "static/js/main.afda29af.js.map",
+  "static\\media\\figure-fortran.png": "static/media/figure-fortran.17173c0d.png",
+  "static\\media\\figure-kozulya.png": "static/media/figure-kozulya.3297e13b.png",
   "static\\media\\linkedin.svg": "static/media/linkedin.dcf6b492.svg",
-  "static\\media\\photo.jpg": "static/media/photo.c8a64045.jpg",
-  "static\\media\\vapor-bg.png": "static/media/vapor-bg.9c51752c.png",
-  "static\\media\\vapor-statue.png": "static/media/vapor-statue.026efdf2.png"
+  "static\\media\\photo.jpg": "static/media/photo.c8a64045.jpg"
 }
