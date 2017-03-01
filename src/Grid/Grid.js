@@ -42,6 +42,7 @@ const Grid = () => (
           >
             <div className="square__wrap">
               <img
+                role="presentation"
                 src={figureFortran}
                 className="square__image"
               />
@@ -58,6 +59,7 @@ const Grid = () => (
           >
             <div className="square__wrap">
               <img
+                role="presentation"
                 src={figureKozulya}
                 className="square__image"
               />
