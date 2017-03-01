@@ -55,7 +55,7 @@ const Grid = () => (
         <div className="column">
           <a
             className="square"
-            href="https://telegram.me/addstickers/Fortrach"
+            href="https://t.me/govnokoder"
           >
             <div className="square__wrap">
               <img
