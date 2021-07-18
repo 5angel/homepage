@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: snow; }
+
+ul {
+  list-style: none; }
+
+.header,
+.footer {
+  background-position: center;
+  background-size: cover; }
+
+.header {
+  position: relative;
+  height: 80vh;
+  background-image: url("/header.8a243393.jpg"); }
+
+.footer {
+  width: 100%;
+  max-width: 100%; }
+
+.heading {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  margin-bottom: -20px;
+  padding: 20px 60px;
+  background-color: white;
+  text-align: center;
+  border-radius: 16px; }
+  .heading h1 {
+    font-size: 40px;
+    font-weight: 700; }
+  .heading h2 {
+    font-size: 31px;
+    font-weight: 400;
+    color: gray; }
+
+.row {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0; }
+
+.column {
+  width: 400px;
+  box-sizing: border-box;
+  border: 1px solid lightgray;
+  padding: 40px;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  color: grey; }
+  .column:first-child {
+    border-left-width: 0; }
+  .column:last-child {
+    border-right-width: 0; }
+  .column.card {
+    width: 360px;
+    margin: 0 20px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    text-align: center; }
+    .column.card.middle {
+      background-color: white;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1); }
+    .column.card h3 {
+      text-transform: uppercase; }
+    .column.card h4 {
+      font-size: 48px;
+      font-weight: 300;
+      color: black; }
+    .column.card ul {
+      margin-top: 20px; }
+    .column.card li {
+      border-top: 1px solid lightgray;
+      padding: 20px 0; }
+      .column.card li:first-child {
+        border-width: 0; }
+  .column h3 {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: black; }
+  .column p {
+    margin-bottom: 20px; }
+
+a.apply {
+  display: block;
+  background-color: black;
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 40px 0;
+  letter-spacing: 1.2px; }
+  a.apply:before, a.apply:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    font-size: 0;
+    margin: 0 20px;
+    margin-top: -6px;
+    border: 12px solid white;
+    border-top-color: transparent;
+    border-bottom-color: transparent; }
+  a.apply::before {
+    border-right-width: 0; }
+  a.apply:after {
+    border-left-width: 0; }
+
+
+/*# sourceMappingURL=/bundle.81605655.css.map */

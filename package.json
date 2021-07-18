@@ -1,8 +1,16 @@
 {
   "name": "homepage",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "bundle.js",
   "repository": "https://github.com/5angel/homepage.git",
   "author": "vkozulya <kozulyav@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel ./src/index.html -d ./docs",
+    "build": "parcel build ./src/index.html --public-url ./ -d ./docs"
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "parcel": "1.12.3"
+  }
 }
