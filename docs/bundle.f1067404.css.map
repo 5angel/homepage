@@ -1,1 +1,0 @@
-{"version":3,"sources":["styles.scss"],"names":[],"mappings":"AAAA,EACE,QAAS,CACT,SAAU,CAGZ,IACE,WAAY,CACZ,0DAAwC,CACxC,yBAA0B","file":"bundle.f1067404.css","sourceRoot":"..\\src","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n.bg {\r\n  height: 80vh;\r\n  background-image: url(\"./assets/bg.jpg\");\r\n  background-size: 100% auto;\r\n}\r\n"]}

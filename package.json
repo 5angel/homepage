@@ -6,6 +6,7 @@
   "author": "vkozulya <kozulyav@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "prebuild": "rm -rf docs",
     "start": "parcel ./src/index.html -d ./docs",
     "build": "parcel build ./src/index.html --public-url ./ -d ./docs"
   },
