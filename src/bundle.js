@@ -53,11 +53,26 @@ document.addEventListener("DOMContentLoaded", () => {
         pane.style.transform = `translateX(${position}px)`;
     }
 
+    function toogleArrows() {
+        if (-position === total * STEP) {
+            toright.classList.add('arrow--hidden')
+        } else {
+            toright.classList.remove('arrow--hidden')
+        }
+
+        if (position === 0) {
+            toleft.classList.add('arrow--hidden')
+        } else {
+            toleft.classList.remove('arrow--hidden')
+        }
+    }
+
     toright.addEventListener("click", (event) => {
         event.preventDefault();
         if (-position < total * STEP) {
             setPosition(-STEP);
         }
+        toogleArrows()
     });
 
     toleft.addEventListener("click", (event) => {
@@ -66,5 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (position < 0) {
             setPosition(STEP);
         }
+        toogleArrows()
     });
 });
