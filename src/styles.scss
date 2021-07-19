@@ -428,4 +428,17 @@ a.apply {
       font-size: 48px;
     }
   }
+
+  #toleft, #toright {
+    z-index: 1;
+    top: 90%;
+  }
+
+  #toright {
+    left: 50%;
+  }
+
+  #toleft {
+    right: 50%;
+  }
 }
