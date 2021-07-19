@@ -81,7 +81,8 @@ p {
 
 .column {
   position: relative;
-  width: 390px;
+  max-width: 390px;
+  width: 100%;
   padding: 40px;
   color: grey;
 
@@ -263,6 +264,10 @@ a.apply {
   }
 }
 
+.arrow--hidden{
+  visibility: hidden;
+}
+
 .carousel {
   height: 400px;
   overflow: hidden;
@@ -318,7 +323,14 @@ a.apply {
   text-align: center;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 400px) {
+  .bubble {
+    padding: 20px 20px;
+
+  }
+}
+
+@media (max-width: 575.98px) {  
 }
 
 // Small devices (landscape phones, less than 768px)
@@ -337,7 +349,8 @@ a.apply {
   }
 
   .column {
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
     padding: 16px 24px;
     font-size: 16px;
   }
@@ -383,7 +396,8 @@ a.apply {
   }
 
   .column {
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
     margin: 0 auto;
     padding: 40px 0;
     font-size: 18px;
