@@ -6,7 +6,7 @@
   "author": "vkozulya <kozulyav@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "prebuild": "rm -rf docs",
+    "prebuild": "find docs/* ! -name 'CNAME' -delete",
     "start": "parcel ./src/index.html -d ./docs",
     "build": "parcel build ./src/index.html --public-url ./ -d ./docs"
   },

@@ -1,6 +1,10 @@
 import "./styles.scss";
 
 const cards = [{
+    name: 'Евгений',
+    position: 'Маркетолог',
+    message: 'Получил дельные советы по&nbsp;возможному направлению для развития, по&nbsp;тому, какие знания освежить и&nbsp;что же делать с&nbsp;резюме и&nbsp;сопроводительным письмом. Обсудили стеклянный потолок и&nbsp;как посмотреть на него сверху, а&nbsp;не&nbsp;снизу. Рекомендую',
+}, {
     name: 'Кирилл',
     position: 'Тимлид',
     message: 'Влад помогает мне решить тимлидские вопросы, которые мне стыдно даже гуглить. Чувствую себя увереннее и&nbsp;спокойнее, думаю, это положительно скажется на&nbsp;команде и&nbsp;продукте в&nbsp;целом, а&nbsp;самое важное&nbsp;— это положительно сказывается на&nbsp;мне. Перестаю париться и&nbsp;получаю больше удовольствия от&nbsp;работы',
@@ -53,11 +57,26 @@ document.addEventListener("DOMContentLoaded", () => {
         pane.style.transform = `translateX(${position}px)`;
     }
 
+    function toogleArrows() {
+        if (-position === total * STEP) {
+            toright.classList.add('arrow--hidden')
+        } else {
+            toright.classList.remove('arrow--hidden')
+        }
+
+        if (position === 0) {
+            toleft.classList.add('arrow--hidden')
+        } else {
+            toleft.classList.remove('arrow--hidden')
+        }
+    }
+
     toright.addEventListener("click", (event) => {
         event.preventDefault();
         if (-position < total * STEP) {
             setPosition(-STEP);
         }
+        toogleArrows()
     });
 
     toleft.addEventListener("click", (event) => {
@@ -66,5 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (position < 0) {
             setPosition(STEP);
         }
+        toogleArrows()
     });
 });
