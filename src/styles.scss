@@ -221,43 +221,48 @@ a.apply {
   position: relative;
   margin: 40px auto;
   width: 360px;
+  z-index: 1;
 }
 
 #toleft, #toright {
   position: absolute;
-  top: 50%;
-  left: 100%;
-  width: 60px;
-  height: 60px;
-  margin: 0 40px;
-  margin-top: -30px;
-  border-radius: 50%;
-  border: 1px solid lightgray;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-
+  width: 30px;
+  height: 100%;
+  z-index: 1;
+  opacity: .5;
   &:after {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    display: inline-block;
     content: '';
-    font-size: 0;
-    border: 12px solid gray;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    transform: rotate(-135deg);
   }
 }
 
+#toleft:hover, #toright:hover{
+  transition: .2s;
+  opacity: 1;
+}
+
+#toright{
+  left: 92%;
+  border-radius: 0 16px 16px 0;
+}
+
 #toright:after {
-  margin-left: 2px;
-  border-right-width: 0;
+  transform: rotate(45deg);
+  left: 0;
 }
 
 #toleft {
   left: unset;
-  right: 100%;
-
+  right: 92%;
+  border-radius: 16px 0 0 16px;
   &:after {
     margin-left: -2px;
     border-left-width: 0;
@@ -288,7 +293,7 @@ a.apply {
     width: 100%;
     height: 100%;
     margin: 0 20px;
-    padding: 20px;
+    padding: 20px 30px;
     border-radius: 16px;
     background-color: linen;
     font-size: 18px;
