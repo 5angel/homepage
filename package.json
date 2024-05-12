@@ -1,14 +1,13 @@
 {
   "name": "homepage",
   "version": "1.0.0",
-  "main": "app.js",
   "repository": "https://github.com/5angel/homepage.git",
   "author": "vkozulya <kozulyav@gmail.com>",
   "license": "MIT",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build --no-content-hash src/index.html --dist-dir docs"
   },
   "devDependencies": {
     "parcel": "latest"
