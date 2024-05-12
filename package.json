@@ -1,17 +1,16 @@
 {
   "name": "homepage",
   "version": "1.0.0",
-  "main": "bundle.js",
+  "main": "app.js",
   "repository": "https://github.com/5angel/homepage.git",
   "author": "vkozulya <kozulyav@gmail.com>",
   "license": "MIT",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "prebuild": "find docs/* ! -name 'CNAME' -delete",
-    "start": "parcel ./src/index.html -d ./docs",
-    "build": "parcel build ./src/index.html --public-url ./ -d ./docs"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "devDependencies": {
-    "node-sass": "^6.0.1",
-    "parcel": "1.12.3"
+    "parcel": "latest"
   }
 }
