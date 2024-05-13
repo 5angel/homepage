@@ -7,9 +7,10 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build --no-content-hash src/index.html --dist-dir docs"
+    "build": "parcel build --no-source-maps src/index.html --dist-dir docs"
   },
   "devDependencies": {
-    "parcel": "latest"
+    "parcel": "latest",
+    "prettier": "2.8.8"
   }
 }
