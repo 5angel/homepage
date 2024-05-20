@@ -94,14 +94,56 @@ header {
   padding: 40px;
 }
 
-.content {
+.content,
+.row {
   display: flex;
-  gap: 40px;
   flex: 1;
 }
 
+.row > .column {
+  height: 320px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desc {
+  font-size: 18px;
+  text-align: left;
+}
+
+h3 {
+  width: 260px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.content {
+  gap: 80px;
+}
+
+.figure {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: 0 0;
+  height: 100%;
+  width: 100%;
+}
+
 .column {
+  position: relative;
   flex: 1;
+}
+
+.row {
+  width: 100%;
 }
 
 footer {
