@@ -1,0 +1,379 @@
+// Reset & Base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #090719;
+  color: #aaa;
+}
+
+// Typography
+h1, h2, h3 {
+  font-family: 'Geologica', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  color: white;
+}
+
+h1 {
+  position: relative;
+  z-index: 0;
+  margin: 0 auto;
+  font-size: 80px;
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  margin-bottom: 16px;
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+h3 {
+  font-size: 24px; 
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: square;
+  margin: 20px 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+// Links
+a {
+  &:link,
+  &:visited {
+    color: black;
+  }
+
+  &:hover,
+  &:active {
+    color: black;
+  }
+
+  &.unlined {
+    text-decoration: none;
+  }
+}
+
+// Layout
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+header {
+  padding: 80px 0 40px;
+}
+
+.subtitle {
+  max-width: 400px;
+  margin: 20px auto 0;
+  text-align: center;
+  color: #aaa;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.use-cases {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  width: 100%;
+  padding: 16px 40px;
+}
+
+.column {
+  display: contents;
+}
+
+.block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-color: #0e0b26;
+  border: 1px solid #120e32;
+  border-radius: 20px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  outline: 1px solid #060512;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(62, 119, 233, 0.15) 0%,
+      rgba(100, 76, 162, 0.08) 30%,
+      transparent 70%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.pricing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.tier {
+  position: relative;
+  width: 280px;
+  height: 400px;
+  padding: 40px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  --brand-color: rgba(255, 255, 255, 0.3);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    pointer-events: none;
+    transition: border-color 0.3s ease;
+  }
+
+  &:hover {
+    box-shadow: 0 0 40px var(--brand-color);
+
+    &::after {
+      border-color: var(--brand-color);
+    }
+  }
+
+  &--blue {
+    --brand-color: rgba(0, 100, 255, 0.3);
+  }
+
+  &--green {
+    --brand-color: rgba(0, 255, 0, 0.3);
+  }
+
+  &--red {
+    --brand-color: rgba(255, 0, 0, 0.3);
+  }
+
+  &--purple {
+    --brand-color: rgba(150, 0, 255, 0.3);
+  }
+
+  &--orange {
+    --brand-color: rgba(255, 165, 0, 0.3);
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+  }
+  
+  &__title {
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: #eee;
+    margin-bottom: 40px;
+  }
+
+  &__price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  &__price {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+  }
+
+  &__period {
+    font-size: 16px;
+    color: #aaa;
+  }
+
+  &__description {
+    font-size: 14px;
+    color: #aaa;
+    line-height: 1.5;
+    margin: 0;
+    margin-left: -20px;
+    padding-left: 20px;
+    text-align: left;
+    flex: 1;
+  }
+
+  &__button {
+    margin-top: auto;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+footer {
+  padding: 20px 10px;
+}
+
+.credits {
+  margin: 0 -40px;
+  padding: 8px 0;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+// Button
+.tier-button {
+  display: block;
+  width: 100%;
+  padding: 24px 0;
+  line-height: 0;
+  margin: 0 auto;
+  font-family: 'Geologica', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  color: black;
+  border-radius: 24px;
+  transition: all 0.3s ease;
+
+  &--book {
+    background: linear-gradient(
+      135deg,
+      #33ffaa 0%,
+      #33e6ff 25%,
+      #ff33ff 50%,
+      #ff33b3 75%,
+      #ffcc33 100%
+    );
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    transition: background-position 0.3s ease;
+  }
+
+  &--apply {
+    background: white;
+    transition: background 0.3s ease;
+  }
+
+}
+
+.tier--disabled .tier-button {
+  background: #333 !important;
+  color: #666 !important;
+  cursor: not-allowed;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.tier:hover .tier-button--book {
+  background-position: 100% 0%;
+}
+
+.tier:hover .tier-button--apply {
+  background: #aaa !important;
+}
+
+.tier--disabled:hover .tier-button {
+  background: #333 !important;
+}
+
+// Legacy class for backwards compatibility
+.book-button {
+  @extend .tier-button;
+  @extend .tier-button--book;
+}
+
+.book-button-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+// Tables
+table {
+  width: 100%;
+  margin: 8px -8px -8px;
+  margin-top: -8px;
+  text-align: left;
+  border-spacing: 8px;
+}
+
+th {
+  text-transform: uppercase;
+}
+
+// Responsive
+@media (max-width: 1000px) {
+  .container {
+    width: 100%;
+  }
+
+  .use-cases {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing {
+    flex-direction: column;
+  }
+}
+

@@ -4,65 +4,56 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kozulia Ltd</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="app.js"></script>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.scss" />
+    <script type="module" src="app.ts"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@500;700&display=swap" rel="stylesheet">
   </head>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
   </style>
   <body>
     <div class="container">
       <header>
-        <h1 class="logo">Kozulia Tech Consulting<br />& Software Solutions</h1>
+        <h1 class="logo">KOZULIA</h1>
+        <p class="subtitle">If you're stuck and need another brain and a fresh perspective, book a consultation with me</p>
       </header>
-      <div class="use-cases">
-        <div class="column">
-          <div class="use-case">
-            <h2>Software Development</h2>
-            <p>
-              We develop custom software solutions tailored to your business needs. Our team is
-              well-versed in both backend and frontend development, allowing us to provide complete
-              end-to-end solutions.
-            </p>
-            <p>
-              From web platforms to enterprise applications, we have the skills and knowledge to
-              bring your vision to life with robust, scalable, and maintainable code.
-            </p>
-          </div>
-          <div class="use-case">
-            <h2>Individual Consulting</h2>
-            <p>
-              We also offer individual 1-on-1 consulting for developers and leaders. Whether you're
-              dealing with impostor syndrome, navigating career transitions, or stepping into your
-              first leadership role, we'll help you identify knowledge gaps, understand market
-              realities, and develop the skills needed to succeed.
-            </p>
-            <p>
-              We provide mentorship where your
-              superiors have failed, teaching you how to manage people, organize teams effectively, and
-              make sound technical and financial decisions.
-            </p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="use-case">
-            <h2>Tech Consulting</h2>
-            <p>
-              We provide strategic technology consulting to help you make informed decisions about
-              your IT infrastructure, architecture, and development processes.
-            </p>
-            <p>
-              Our expertise includes system design, enterprise architecture, software engineering
-              management, and best practices for building and scaling technical teams.
-            </p>
-          </div>
-          <div class="use-case">
-            <h2>Let's get in touch</h2>
-            <a href="https://calendly.com/ctohow/free-call" target="_blank" rel="noopener noreferrer" data-parcel-ignore class="book-button">
-              Book a free call
-            </a>
-          </div>
-        </div>
+      <div class="pricing" x-data="pricing">
+        <template x-for="tier in tiers" :key="tier.title">
+          <a 
+            :href="tier.buttonLink || '#'" 
+            :target="tier.buttonType === 'book' ? '_blank' : ''"
+            :rel="tier.buttonType === 'book' ? 'noopener noreferrer' : ''"
+            data-parcel-ignore 
+            :class="[
+              'block tier',
+              (!tier.buttonLink || tier.buttonLink === '#') ? 'tier--disabled' : '',
+              tier.brandColor ? `tier--${tier.brandColor}` : ''
+            ]"
+            @click="(!tier.buttonLink || tier.buttonLink === '#') && $event.preventDefault()">
+            <h3 class="tier__title" x-text="tier.title"></h3>
+            <div class="tier__price-row">
+              <div class="tier__price" x-text="`€${tier.price}`"></div>
+              <div class="tier__period" x-show="tier.period" x-text="tier.period"></div>
+            </div>
+            <ul class="tier__description">
+              <template x-for="item in tier.description" :key="item">
+                <li x-text="item"></li>
+              </template>
+            </ul>
+            <div 
+              x-show="tier.hasButton"
+              :class="[
+                'tier-button',
+                tier.buttonType === 'book' ? 'tier-button--book' : 'tier-button--apply',
+                'tier__button'
+              ]"
+              x-text="tier.buttonType === 'book' ? tier.buttonText : 'Apply'">
+            </div>
+          </a>
+        </template>
       </div>
       <footer>
         <div class="credits">
