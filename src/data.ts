@@ -20,7 +20,7 @@ export const pricingTiers: PricingTier[] = [
     ],
     hasButton: true,
     buttonText: 'Apply FREE',
-    buttonLink: 'https://calendly.com/ctohow/free-call',
+    buttonLink: 'https://calendly.com/kozulia/free-call',
     buttonType: 'book'
   },
   {
