@@ -159,6 +159,7 @@ header {
   justify-content: center;
   align-items: stretch;
   box-sizing: border-box;
+  padding: 40px 20px;
 }
 
 .tier {
@@ -368,12 +369,9 @@ th {
     width: 100%;
   }
 
-  .use-cases {
-    grid-template-columns: 1fr;
-  }
-
   .pricing {
-    flex-direction: column;
+    max-width: 100%;
+    padding: 40px 20px;
   }
 }
 
