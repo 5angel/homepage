@@ -1,41 +1,20 @@
-<!DOCTYPE html><html lang=ru><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Kozulia Ltd</title><link rel=icon type=image/svg+xml href=/favicon.dcbf9749.svg><link rel=stylesheet href=/homepage.43ef8ea0.css><script type=module src=/homepage.04765f52.js></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Geologica:wght@500;700&amp;display=swap" rel=stylesheet><style>@import "https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap";</style><body>
-    <div class=container>
-      <header>
-        <h1 class=logo>KOZULIA</h1>
-        <p class=subtitle>If you're stuck and need another brain and a fresh perspective, book a consultation with me</p>
-      </header>
-      <div class=pricing x-data=pricing>
-        <template x-for="tier in tiers" :key=tier.title>
-          <a :href="tier.buttonLink || '#'" :target="tier.buttonType === 'book' ? '_blank' : ''" :rel="tier.buttonType === 'book' ? 'noopener noreferrer' : ''" data-parcel-ignore :class="[
-              'block tier',
-              (!tier.buttonLink || tier.buttonLink === '#') ? 'tier--disabled' : '',
-              tier.brandColor ? `tier--${tier.brandColor}` : ''
-            ]" @click="(!tier.buttonLink || tier.buttonLink === '#') &amp;&amp; $event.preventDefault()">
-            <h3 class=tier__title x-text=tier.title></h3>
-            <div class=tier__price-row>
-              <div class=tier__price x-text="`€${tier.price}`"></div>
-              <div class=tier__period x-show=tier.period x-text=tier.period></div>
-            </div>
-            <ul class=tier__description>
-              <template x-for="item in tier.description" :key=item>
-                <li x-text=item></li>
-              </template>
-            </ul>
-            <div x-show=tier.hasButton :class="[
-                'tier-button',
-                tier.buttonType === 'book' ? 'tier-button--book' : 'tier-button--apply',
-                'tier__button'
-              ]" x-text="tier.buttonType === 'book' ? tier.buttonText : 'Apply'">
-            </div>
-          </a>
-        </template>
-      </div>
-      <footer>
-        <div class=credits>
-          Despoinas &amp; Nikou Pattichi, 27, Flat/Office 2 3071, Lemesos, Cyprus<br>
-          © KOZULIA LTD, 2024 All rights reserved
-        </div>
-      </footer>
-    </div>
-  
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOZULIA</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@500;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-BnKVAfGi.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CZscUW7v.css">
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+  </style>
+  <body>
+  </body>
+</html>
 
