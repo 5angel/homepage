@@ -8,7 +8,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "dev": "vite",
-    "build": "rimraf docs && vite build && node copy-cname.js",
+    "build": "rimraf docs && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
