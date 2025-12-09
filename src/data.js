@@ -3,53 +3,47 @@ export const pricingTiersData = [
     key: 'consultant',
     price: 0,
     period: '',
-    hasButton: true,
-    buttonLink: 'https://calendly.com/kozulia/free-call',
-    buttonType: 'book'
-  },
-  {
-    key: 'advisor',
-    price: 100,
-    period: '/month',
-    hasButton: true,
-    buttonType: 'apply',
-    buttonLink: 'https://forms.gle/DXomH8v4TnP1wrPd6',
-    brandColor: 'blue'
-  },
-  {
-    key: 'mentor',
-    price: 500,
-    period: '/month',
-    hasButton: true,
-    buttonType: 'apply',
-    buttonLink: 'https://forms.gle/DXomH8v4TnP1wrPd6',
-    brandColor: 'purple'
-  },
-  {
-    key: 'guide',
-    price: 200,
-    period: '',
-    hasButton: true,
-    buttonType: 'apply',
-    buttonLink: 'https://forms.gle/DXomH8v4TnP1wrPd6',
-    brandColor: 'green'
+    link: 'https://calendly.com/kozulia/free-call',
+    variant: 'book'
   },
   {
     key: 'coach',
     price: 300,
     period: '',
-    hasButton: true,
-    buttonType: 'apply',
-    buttonLink: 'https://forms.gle/DXomH8v4TnP1wrPd6',
-    brandColor: 'red'
+    variant: 'apply',
+    link: 'https://forms.gle/DXomH8v4TnP1wrPd6',
+    color: 'red'
+  },
+  {
+    key: 'mentor',
+    price: 500,
+    period: 'month',
+    variant: 'apply',
+    link: 'https://forms.gle/DXomH8v4TnP1wrPd6',
+    color: 'purple'
+  },
+  {
+    key: 'expert',
+    price: 600,
+    period: '',
+    variant: 'apply',
+    link: 'https://forms.gle/DXomH8v4TnP1wrPd6',
+    color: 'green'
+  },
+  {
+    key: 'advisor',
+    price: 999,
+    period: 'month',
+    variant: 'apply',
+    link: 'https://forms.gle/DXomH8v4TnP1wrPd6',
+    color: 'blue'
   },
   {
     key: 'partner',
-    price: 2000,
-    period: '/month',
-    hasButton: true,
-    buttonType: 'apply',
-    buttonLink: 'https://forms.gle/DXomH8v4TnP1wrPd6',
-    brandColor: 'orange'
+    price: 4000,
+    period: 'month',
+    variant: 'apply',
+    link: 'https://forms.gle/DXomH8v4TnP1wrPd6',
+    color: 'orange'
   }
 ]
