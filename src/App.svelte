@@ -110,9 +110,15 @@
         </div>
       </a>
     </div>
+    <h3 class="section-heading help">{t(lang, 'services.heading')}</h3>
   </header>
-
-  <div class="content-block"></div>
+  <div class="content-block">
+    <ul class="services-list">
+      {#each t(lang, 'services') || [] as service}
+        <li>{service}</li>
+      {/each}
+    </ul>
+  </div>
 
   <div class="pricing">
     <h3 class="section-heading">{t(lang, 'heading.individual')}</h3>

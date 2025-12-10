@@ -13,6 +13,15 @@ export const translations = {
     'apply': 'Apply',
     'bookCall': 'Book a call',
     'period.month': 'month',
+    'services.heading': 'How I can help',
+    'services': [
+      'Development diagnostics',
+      'Process building',
+      'Technical strategy',
+      'Leadership development',
+      'Decision making',
+      'Team scaling'
+    ],
     'heading.individual': 'Individual tiers',
     'heading.corporate': 'Corporate tiers',
     'tier.consultant.title': 'Consultant',
@@ -55,6 +64,15 @@ export const translations = {
     'apply': 'Заказать',
     'bookCall': 'Записаться',
     'period.month': 'месяц',
+    'services.heading': 'Чем я могу помочь',
+    'services': [
+      'Диагностика разработки',
+      'Построение процессов',
+      'Техническая стратегия',
+      'Развитие руководителей',
+      'Принятие решений',
+      'Масштабирование команд'
+    ],
     'heading.individual': 'Индивидуальные тарифы',
     'heading.corporate': 'Корпоративные тарифы',
     'tier.consultant.title': 'Консультант',
