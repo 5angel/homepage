@@ -1,8 +1,35 @@
+// CSS Variables
+:root {
+  --color-bg-primary: #090719;
+  --color-bg-secondary: #0e0b26;
+  --color-bg-tertiary: #120e32;
+  --color-bg-quaternary: #060512;
+  --color-text-primary: white;
+  --color-text-secondary: #aaa;
+  --color-text-tertiary: #eee;
+  --color-text-quaternary: #333;
+  --color-text-disabled: #666;
+  --color-border: #120e32;
+  --color-hover: #333;
+  
+  --font-primary: 'Geologica', sans-serif;
+  --font-secondary: 'Trebuchet MS', sans-serif;
+  --font-base: Arial, sans-serif;
+  
+  --transition-base: 0.3s ease;
+  --border-radius-sm: 8px;
+  --border-radius-md: 20px;
+  --border-radius-lg: 24px;
+  
+  --header-section-width: 360px;
+}
+
 // Reset
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 html, body {
@@ -10,10 +37,10 @@ html, body {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-base);
   font-size: 16px;
-  background-color: #090719;
-  color: #aaa;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-secondary);
 }
 
 li {
@@ -22,39 +49,40 @@ li {
 
 // Typography
 h1 {
-  font-family: 'Geologica', sans-serif;
+  font-family: var(--font-primary);
   font-size: 80px;
   font-weight: 700;
-  color: white;
+  color: var(--color-text-primary);
   margin: 0;
+  margin-left: -5px;
 }
 
 h3 {
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family: var(--font-secondary);
   font-size: 24px;
   font-weight: 700;
-  color: white;
+  color: var(--color-text-primary);
 }
 
 .greeting {
   line-height: 1;
   margin-bottom: -10px;
   text-align: left;
-  color: white;
-  font-family: 'Geologica', sans-serif;
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
   font-size: 20px;
 }
 
 .pitch {
-  max-width: 360px;
-  margin: 20px 0 0;
+  max-width: var(--header-section-width);
+  margin: 8px 0 0;
   text-align: left;
-  color: #aaa;
+  color: var(--color-text-secondary);
   font-size: 16px;
   line-height: 1.3;
 
   p {
-    margin: 0 0 20px 0;
+    margin: 0 0 16px 0;
 
     &:last-child {
       margin-bottom: 0;
@@ -74,8 +102,8 @@ h3 {
 
 .lang-switcher {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 40px;
+  right: 40px;
   display: flex;
   gap: 0;
   border-radius: 8px;
@@ -87,48 +115,90 @@ h3 {
   padding: 8px 16px;
   background: rgba(14, 11, 38, 0.8);
   border: none;
-  color: #aaa;
-  font-family: 'Geologica', sans-serif;
+  color: var(--color-text-secondary);
+  font-family: var(--font-primary);
   font-size: 14px;
   cursor: pointer;
-  transition: all 0.3s ease;
 
   &:hover {
-    background: rgba(14, 11, 38, 1);
-    color: white;
+    background: #0e0b26;
+    color: var(--color-text-primary);
   }
 
   &.active {
-    background: rgba(62, 119, 233, 0.3);
-    color: white;
+    background: #1c2c61;
+    color: var(--color-text-primary);
   }
 }
 
 header {
   position: relative;
-  width: 920px;
+  width: 100%;
   height: 508px;
   padding-top: 40px;
   margin: 0 auto;
-  margin-bottom: -112px;
+  margin-bottom: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
 }
 
-.ctohow-container {
-  position: absolute;
-  top: 0;
-  right: 0;
+// Shared header section styles
+.intro,
+.links {
+  flex: 0 0 auto;
+  width: var(--header-section-width);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: flex-start;
+  padding-top: 40px;
   height: 100%;
+}
+
+.intro-button.book {
+  width: 160px;
+  padding: 20px 0;
+  align-self: center;
+  font-size: 20px;
+  border-radius: 20px;
+  margin-top: auto;
+  margin-bottom: 50px;
+
+  &:hover {
+    background-position: 100% 0%;
+  }
+}
+
+.photo {
+  position: relative;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 0 0 auto;
+  margin: 0 -106px;
+
+  img {
+    display: block;
+  }
+}
+
+.links {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  z-index: 1;
 }
 
-.ctohow-link {
-  width: 250px;
-  border-radius: 8px;
-  background: #0e0b26;
-  padding: 8px 20px;
+.link {
+  width: 300px;
+  border-radius: var(--border-radius-sm);
+  background: var(--color-bg-secondary);
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -137,80 +207,57 @@ header {
   color: inherit;
 
   &:hover {
-    background: #333;
+    background: #1c2c61;
   }
-}
 
-.ctohow-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  white-space: nowrap;
-  flex: 0 1 auto;
-  min-width: 0;
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    white-space: nowrap;
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
+  &__circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid var(--color-text-primary);
+    overflow: hidden;
+    position: relative;
+    flex: 0 0 60px;
+    flex-shrink: 0;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 110%;
+      height: 110%;
+      object-fit: cover;
+    }
+  }
 }
 
 .blog-label {
-  margin: 0;
-  color: #aaa;
-  font-size: 14px;
-  white-space: nowrap;
+  font-size: 13px;
 }
 
 .blog-title {
-  margin: 4px 0 0 0;
-  color: white;
-  font-size: 16px;
+  padding-top: 4px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 1.2;
-  white-space: nowrap;
+  font-family: var(--font-secondary);
+  color: var(--color-text-primary);
 }
 
-.ctohow-circle {
-  width: 60px;
-  height: 60px;
-  margin: -40px 0;
-  border-radius: 50%;
-  border: 3px solid white;
-  overflow: hidden;
-  position: relative;
-  flex: 0 0 60px;
-  flex-shrink: 0;
-  outline: 4px solid #090719;
-
-  img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 110%;
-    height: 110%;
-    object-fit: cover;
-  }
-}
-
-.header-content {
-  position: absolute;
-  top: 80px;
-  left: 0;
-  z-index: 1;
-}
-
-.image-container {
-  position: absolute;
-  bottom: 0;
-  z-index: -1;
+.content-block {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
+  min-height: 200px;
+  background-color: var(--color-bg-secondary);
 }
 
 .pricing {
@@ -234,14 +281,14 @@ header {
   position: relative;
   width: 280px;
   height: 400px;
-  background-color: #0e0b26;
-  border: 1px solid #120e32;
-  border-radius: 20px;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
-  outline: 1px solid #060512;
+  outline: 1px solid var(--color-bg-quaternary);
   text-decoration: none;
   color: inherit;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow var(--transition-base);
   --brand-color: #ccc;
 
   .content {
@@ -275,7 +322,7 @@ header {
       height: 200%;
       background: radial-gradient(ellipse at center, #6666ff 0%, transparent 70%);
       opacity: 0.15;
-      transition: opacity 0.3s ease, background 0.3s ease;
+      transition: opacity var(--transition-base), background var(--transition-base);
     }
 
     &::after {
@@ -286,9 +333,9 @@ header {
       right: 0;
       bottom: 0;
       border: 2px solid transparent;
-      border-radius: 20px;
+      border-radius: var(--border-radius-md);
       opacity: 0.3;
-      transition: border-color 0.3s ease;
+      transition: border-color var(--transition-base);
     }
   }
 
@@ -318,7 +365,7 @@ header {
 
   .title {
     text-align: center;
-    color: #eee;
+    color: var(--color-text-tertiary);
     margin-bottom: 40px;
   }
 
@@ -330,22 +377,22 @@ header {
   }
 
   .price {
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: var(--font-secondary);
     font-size: 48px;
     font-weight: 700;
-    color: white;
+    color: var(--color-text-primary);
     line-height: 1;
   }
 
   .period {
     font-size: 16px;
-    color: #aaa;
+    color: var(--color-text-secondary);
     white-space: nowrap;
   }
 
   .description {
     font-size: 14px;
-    color: #aaa;
+    color: var(--color-text-secondary);
     line-height: 1.5;
     list-style: square;
     padding: 0;
@@ -363,14 +410,14 @@ header {
   width: 100%;
   line-height: 0;
   padding: 24px 0;
-  font-family: 'Geologica', sans-serif;
+  font-family: var(--font-primary);
   font-size: 24px;
   font-weight: 500;
   text-align: center;
   text-decoration: none;
   color: black;
-  border-radius: 24px;
-  transition: all 0.3s ease;
+  border-radius: var(--border-radius-lg);
+  transition: all var(--transition-base);
   background: #eee;
 
   &.book {
@@ -385,12 +432,12 @@ header {
 }
 
 .tier:hover .button.apply:not(.disabled) {
-  background: #aaa;
+  background: var(--color-text-secondary);
 }
 
 .tier.disabled .button {
-  background: #333 !important;
-  color: #666 !important;
+  background: var(--color-hover) !important;
+  color: var(--color-text-disabled) !important;
   cursor: not-allowed;
   user-select: none;
 }
@@ -418,7 +465,43 @@ footer {
     top: 10px;
   }
 
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin: 0;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .intro {
+    order: 1;
+    width: 100%;
+    max-width: var(--header-section-width);
+    padding-top: 0;
+    height: auto;
+    align-items: flex-start;
+    align-self: center;
+    margin: 0 auto;
+  }
+
+  .photo {
+    display: none;
+  }
+
+  .links {
+    order: 2;
+    width: 100%;
+    max-width: var(--header-section-width);
+    justify-content: center;
+  }
+
   .pricing {
     padding: 40px 20px;
+  }
+
+  .intro-button.book {
+    margin-top: 20px;
+    margin-bottom: 0;
   }
 }

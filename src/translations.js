@@ -5,11 +5,13 @@ export const translations = {
     'blog.label': 'personal blog (ru)',
     'blog.title': 'HOW TO BE CTO',
     'pitch': [
-      "I spent 20 years burning out in IT until I hit a wall. Now I'm a CEO/CTO helping individuals and companies avoid the mistakes I made myself.",
-      "If you're stuck and need a second head and a fresh perspective, let's jump on a 15-minute call — no charge.",
-      'If it\'s useful, we can continue afterward on a paid basis.'
+      'For 20 years I\'ve worked at the intersection of&nbsp;management and technology.',
+      'Now I work as a CEO/CTO consultant, saving others years of pain, money, and frustration.',
+      'Stuck and need a clear, external perspective? Let\'s jump on a 15-minute call — free of charge.',
+      'If it\'s useful, we can talk about working together for&nbsp;real.'
     ],
     'apply': 'Apply',
+    'bookCall': 'Book a call',
     'period.month': 'month',
     'heading.individual': 'Individual tiers',
     'heading.corporate': 'Corporate tiers',
@@ -45,11 +47,13 @@ export const translations = {
     'blog.label': 'личный блог',
     'blog.title': 'КАК СТАТЬ СТО',
     'pitch': [
-      '20 лет я выгорал в айти, пока не дошел до ручки — теперь я CEO/CTO и помогаю людям и компаниям избегать ошибки, которые совершал сам.',
-      'Если вы застряли, и вам нужна вторая голова и свежий взгляд, го созвонимся на 15 минут. Без оплаты.',
-      'А дальше можем продолжить уже за деньги'
+      '20 лет я работаю на стыке технологий и&nbsp;управления.',
+      'Теперь я CEO/CTO-консультант и экономлю другим годы боли, денег и нервов.',
+      'Буксуете и нужен здравый внешний взгляд? Давайте созвонимся на 15 минут, бесплатно.',
+      'Будет польза — обсудим работу уже за&nbsp;деньги.'
     ],
     'apply': 'Заказать',
+    'bookCall': 'Записаться',
     'period.month': 'месяц',
     'heading.individual': 'Индивидуальные тарифы',
     'heading.corporate': 'Корпоративные тарифы',

@@ -62,47 +62,57 @@
 </script>
 
 <div class="container">
-  <div class="lang-switcher">
-    <button 
-      class="lang-btn" 
-      class:active={lang === 'en'}
-      on:click={() => setLang('en')}
-    >
-      EN
-    </button>
-    <button 
-      class="lang-btn" 
-      class:active={lang === 'ru'}
-      on:click={() => setLang('ru')}
-    >
-      RU
-    </button>
-  </div>
   <header>
-    <div class="image-container">
-      <img src={vladImage} alt="Vlad" />
+    <div class="lang-switcher">
+      <button 
+        class="lang-btn" 
+        class:active={lang === 'en'}
+        on:click={() => setLang('en')}
+      >
+        EN
+      </button>
+      <button 
+        class="lang-btn" 
+        class:active={lang === 'ru'}
+        on:click={() => setLang('ru')}
+      >
+        RU
+      </button>
     </div>
-    <div class="ctohow-container">
-      <a href="https://t.me/ctohow" target="_blank" rel="noopener noreferrer" class="ctohow-link">
-        <div class="ctohow-text">
-          <p class="blog-label">{t(lang, 'blog.label')}</p>
-          <p class="blog-title">{t(lang, 'blog.title')}</p>
-        </div>
-        <div class="ctohow-circle">
-          <img src={ctohowImage} alt="CTO How" />
-        </div>
-      </a>
-    </div>
-    <div class="header-content">
+    <div class="intro">
       <p class="greeting">{t(lang, 'greeting')}</p>
       <h1 class="logo">{t(lang, 'logo')}</h1>
       <div class="pitch">
         {#each t(lang, 'pitch') || [] as item}
-          <p>{item}</p>
+          <p>{@html item}</p>
         {/each}
       </div>
+      <a 
+        href="https://calendly.com/kozulia/free-call" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="button book intro-button"
+      >
+        {t(lang, 'bookCall')}
+      </a>
+    </div>
+    <div class="photo">
+      <img src={vladImage} alt="Vlad" />
+    </div>
+    <div class="links">
+      <a href="https://t.me/ctohow" target="_blank" rel="noopener noreferrer" class="link">
+        <div class="link__text">
+          <p class="blog-label">{t(lang, 'blog.label')}</p>
+          <p class="blog-title">{t(lang, 'blog.title')}</p>
+        </div>
+        <div class="link__circle">
+          <img src={ctohowImage} alt="CTO How" />
+        </div>
+      </a>
     </div>
   </header>
+
+  <div class="content-block"></div>
 
   <div class="pricing">
     <h3 class="section-heading">{t(lang, 'heading.individual')}</h3>
