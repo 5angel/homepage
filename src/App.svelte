@@ -1,8 +1,7 @@
 <script>
   import { t } from './translations.js'
-  import { pricingTiersData } from './data.js'
   import './styles.scss'
-  import vladImage from './vlad_bg.webp'
+  import vladImage from './photo.jpg'
   import ctohowImage from './ctohow.webp'
 
   let lang = 'en'
